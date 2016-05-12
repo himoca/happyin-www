@@ -1,0 +1,57 @@
+{
+  "c": 200,
+  "n": "",
+  "m": "success",
+  "p": {
+    "list": {
+      "product_id": "58",
+      "desc": "天呐，这张大海报简直是宫格控/选择恐惧症的福音！不用再纠结从800张自拍里选出一张好看的，只要你喜欢，你可以都放进海报里。",
+      "name": "我的墙",
+      "color": "#E87028",
+      "quantity": 10000,
+      "thumb": "admin/images/aea948bb-3426-4161-8307-c5bcfb6b56ac.jpg",
+      "type": "3",
+      "price": "199",
+      "size_limit": "{600,600}",
+      "attribute": {
+        "poster_matrix": "{6,9}",
+        "default_orientation": "2"
+      },
+      "quantity_limit": "54",
+      "title1": "我的墙",
+      "title2": "poster",
+      "title3": "MY WALL",
+      "unit_str": "/幅",
+      "inch": {
+        "length": "30",
+        "width": "30",
+        "height": "1"
+      },
+      "cm": {
+        "length": "75.6cm ",
+        "width": " 52.8cm ",
+        "height": " 1.8"
+      },
+      "preview": {
+        "preview_bg_url": "admin/images/a6552872-b198-446d-bdbd-bfff449c66af.jpg",
+        "preview_image_rect": "{{195,188},{330,480}}",
+        "preview_bg_size": "{720,1168}"
+      },
+      "images": [
+        "admin/images/aea948bb-3426-4161-8307-c5bcfb6b56ac.jpg",
+        "admin/images/3d65c9b8-0e51-4277-869f-de269102f932.jpg",
+        "admin/images/1aa687bd-0460-4aa4-9873-d0049782478f.jpg"
+      ],
+      "free": false,
+      "child": []
+    },
+    "share": {
+      "title": "分享免费冲印券给朋友",
+      "content": "大家都可以免费冲印照片啦~",
+      "expire_date": "",
+      "share_limit": 31
+    }
+  },
+  "h": "",
+  "ts": 1463031354000
+}

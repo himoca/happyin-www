@@ -1,0 +1,51 @@
+{
+  "c": 200,
+  "n": "",
+  "m": "success",
+  "p": {
+    "list": {
+      "product_id": "67",
+      "desc": "当然，如果九宫格还满足不了你的话，来人呐，上16宫格！（当然了，又是方形！呵呵哒！）专为“集格癖”定制，我们的口号是：更多宫格，更多选择！",
+      "name": "方格4×4",
+      "color": "#F5C42A",
+      "quantity": 10000,
+      "thumb": "admin/images/483b74c2-9448-4013-9282-4779597b5c2e.jpg",
+      "type": "6",
+      "price": "69",
+      "size_limit": "{400,400}",
+      "attribute": {
+        "poster_matrix": "{4,4}"
+      },
+      "quantity_limit": "16",
+      "title1": "相框",
+      "title2": "photo",
+      "title3": "FRAME",
+      "unit_str": "/幅",
+      "inch": {},
+      "cm": {
+        "length": "32.5cm ",
+        "width": " 32.5cm ",
+        "height": " 1.8"
+      },
+      "preview": {
+        "preview_bg_url": "admin/images/8d65a9a1-5942-438a-a234-5dc0165fba9d.jpg",
+        "preview_image_rect": "{{219,244},{282,282}}",
+        "preview_bg_size": "{720,1133}"
+      },
+      "images": [
+        "admin/images/fb872f29-e074-40b6-922f-26c15734d7f1.jpg",
+        "admin/images/f394b621-4c59-433a-a2a2-8d7d8b779644.jpg"
+      ],
+      "free": false,
+      "child": []
+    },
+    "share": {
+      "title": "分享免费冲印券给朋友",
+      "content": "大家都可以免费冲印照片啦~",
+      "expire_date": "",
+      "share_limit": 31
+    }
+  },
+  "h": "",
+  "ts": 1463031472000
+}

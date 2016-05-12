@@ -1,0 +1,97 @@
+@charset "utf-8";
+
+@function rem($px) {
+	@return $px*(1/10)*1rem;
+}
+
+html {
+	font-size: 62.5%;
+}
+
+@font-face {
+	font-family: 'AmplitudeWide-Ultra';
+	src: url('../fonts/AmplitudeWide-Ultra.ttf') format("truetype");
+}
+
+.ps-box {
+	margin-bottom: 50px;
+}
+
+.ps-cover-box {
+	width: 100%;
+	padding-top: 85.9375%;
+	position: relative;
+
+	.ps-cover-back {
+		position: absolute;
+		left: 0;
+		top: 0;
+		right: 0;
+		bottom: 0;
+		overflow: hidden;
+	}
+}
+
+.ps-info-box {
+	height: rem(38);
+	position: relative;
+	padding: rem(11) rem(13);
+	color: #ffffff;
+
+	.ps-name-box {
+		float: left;
+
+		.ps-enname {
+			font-family: 'AmplitudeWide-Ultra';
+			font-size: rem(23);
+			line-height: rem(25);
+		}
+
+		.ps-chname {
+			font-size: rem(13);
+			font-weight: bold;
+			line-height: rem(17);
+		}
+	}
+
+	.ps-cost-box {
+		position: absolute;
+		top: 1.1rem;
+		right: 1.3rem;
+
+		.ps-cost {
+			font-family: 'AmplitudeWide-Ultra';
+			font-size: rem(20);
+			line-height: rem(38);
+
+			i {
+				font-size: rem(34);
+				line-height: rem(38);
+			}
+
+			.ps-cost-unit {
+				font-size: rem(20);
+			}
+		}
+	}
+}
+
+.ps-desc-box {
+	padding: rem(14) rem(16) 0;
+
+	.ps-desc {
+		word-break: break-all;
+		font-size: rem(12);
+		line-height: rem(18);
+		color: #a4a4a4;
+	}
+
+	.ps-size {
+		font-family: 'AmplitudeWide-Ultra';
+		font-size: rem(12);
+		line-height: rem(20);
+		color: #a4a4a4;
+	}
+}
+
+

@@ -1,0 +1,54 @@
+{
+  "c": 200,
+  "n": "",
+  "m": "success",
+  "p": {
+    "list": {
+      "product_id": "57",
+      "desc": "这是我们最骄傲的产品。它不仅是一个独特的定制相框，还是一个可以挂起来的储物盒。无论是孩子刚出生时穿的小鞋小帽，或是旅行的票根地图，你可以脑洞大开，放任何你想放进去的东西！别让充满记忆的东西，冰冷的躺在角落，请让他重获新生！",
+      "name": "记忆盒子",
+      "color": "#985734",
+      "quantity": 10000,
+      "thumb": "admin/images/496e4178-c582-4b07-b2d3-cb4112762ec6.jpg",
+      "type": "2",
+      "price": "199",
+      "size_limit": "{2200,1100}",
+      "attribute": {},
+      "quantity_limit": "1",
+      "title1": "记忆盒子",
+      "title2": "remember",
+      "title3": "MEMORY BOX",
+      "unit_str": "/幅",
+      "inch": {
+        "length": "15",
+        "width": "15",
+        "height": "2"
+      },
+      "cm": {
+        "length": "4",
+        "width": "4",
+        "height": "5"
+      },
+      "preview": {
+        "preview_bg_url": "admin/images/f7a3fbe7-2ff5-4ff6-b3d9-ae4059d4df39.jpg",
+        "preview_image_rect": "{{170,216},{380,380}}",
+        "preview_bg_size": "{720,1168}"
+      },
+      "images": [
+        "admin/images/faf84f58-9e9b-4c09-b033-4a8a5211110e.jpg",
+        "admin/images/892f18b4-6f6d-4877-95d8-f3716bcb9f39.jpg",
+        "admin/images/f671a6f1-d156-41e7-9d46-b005d26f116a.jpg"
+      ],
+      "free": false,
+      "child": []
+    },
+    "share": {
+      "title": "分享免费冲印券给朋友",
+      "content": "大家都可以免费冲印照片啦~",
+      "expire_date": "",
+      "share_limit": 31
+    }
+  },
+  "h": "",
+  "ts": 1463030815000
+}
