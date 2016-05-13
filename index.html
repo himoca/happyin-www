@@ -1,5 +1,5 @@
 <!DOCTYPE html>
-<html lang="zh">
+<html lang="zh" xmlns:wb="http://open.weibo.com/wb">
 
 <head>
 	<meta charset="UTF-8">
@@ -8,13 +8,10 @@
 		  content="width=device-width, initial-scale=1.0, maximum-scale=1.0, user-scalable=0, minimal-ui">
 	<meta name="format-detection" content="telephone=no">
 	<meta property="qc:admins" content="2000377277601001166375636" />
+	<meta property="wb:webmaster" content="93d18a38a09c40de" />
 	<link rel="icon" href="images/ico.png">
+	<link rel="stylesheet" href="css/style.css">
 	<style>
-		*{
-			margin: 0;
-			padding: 0;
-		}
-
 		html {
 			background: #ffd600;
 		}
@@ -25,51 +22,11 @@
 			left: -9999px;
 		}
 
-		.HI-main-background {
-			width: 100%;
-			background: url("images/background.jpg") repeat-y;
-			background-position: center 0;
-		}
-
-		.HI-main-background .HI-main-img {
-			width: 649px;
-			height: 854px;
-			margin: 0 auto;
-		}
-
-		.HI-main-background .HI-main-img img {
-			display: block;
-		}
-
-		.company-info {
-			width: 649px;
-			margin: 0 auto;
-			padding-bottom: 36px;
-			font-size: 14px;
-			line-height: 20px;
-			text-align: center;
-		}
-
-		.fcs-back-spread {
-			margin: 0 auto;
-			width: 649px;
-			position: relative;
-			font-size: 0;
-		}
-
-		.fcs-back-productbox {
-			position: relative;
-		}
-
-		.fcs-back-productbtn {
-			position: absolute;
-			left: 0;
-			top: 0;
-			right: 0;
-			bottom: 0;
-		}
 
 	</style>
+	<script type="text/javascript" src="js/jquery-2.1.4.min.js"></script>
+	<script type="text/javascript" src="http://qzonestyle.gtimg.cn/qzone/openapi/qc_loader.js" data-appid="101308522" data-redirecturi="http://www.happyin.com.cn/" charset="utf-8"></script>
+	<script src="http://tjs.sjs.sinajs.cn/open/api/js/wb.js?appkey=2005712080" type="text/javascript" charset="utf-8"></script>
 </head>
 <body>
 	<h1>Happyin —— 终身免费手机照片冲印</h1>
@@ -96,6 +53,43 @@
 			<p>Beijing HappyIn Technology Co., Ltd.</p>
 			<p>商务合作：bd@happyin.com.cn  京ICP备16023187号</p>
 		</div>
+		<div class="login-banner">
+			<div class="QQ-login-box">
+				<img alt="" src="images/Connect_logo_7.png" width="63" height="22">
+				<a href="javascript:void(0)" id="qqLoginBtn"></a>
+			</div>
+			<div class="weibo-login-box">
+				<wb:share-button appkey="2005712080" addition="simple" type="button"></wb:share-button>
+			</div>
+		</div>
 	</div>
+
+	<script>
+		$('#qqLoginBtn').on('click',function(){
+			QC.Login.showPopup({
+				appId:"101308522",
+				redirectURI:""
+			});
+		});
+
+		WB2.anyWhere(function(W){
+			W.parseCMD("/users/show.json", function(sResult, bStatus){
+				try{
+					//to do something...
+				}catch(e){}
+			},{
+				uid: '2005712080'
+			},{
+				method: 'get'
+			});
+		});
+
+		$('#weiboLoginBtn').on('click',function(){
+			WB2.login(function() {
+
+			});
+		});
+
+	</script>
 </body>
 </html>

@@ -1,0 +1,89 @@
+@charset "utf-8";
+
+.HI-main-background {
+	width: 100%;
+	background: url("../images/background.jpg") repeat-y;
+	background-position: center 0;
+}
+
+.HI-main-background .HI-main-img {
+	width: 649px;
+	height: 854px;
+	margin: 0 auto;
+}
+
+.HI-main-background .HI-main-img img {
+	display: block;
+}
+
+.company-info {
+	width: 649px;
+	margin: 0 auto;
+	padding-bottom: 36px;
+	font-size: 14px;
+	line-height: 20px;
+	text-align: center;
+}
+
+.fcs-back-spread {
+	margin: 0 auto;
+	width: 649px;
+	position: relative;
+	font-size: 0;
+}
+
+.fcs-back-productbox {
+	position: relative;
+}
+
+.fcs-back-productbtn {
+	position: absolute;
+	left: 0;
+	top: 0;
+	right: 0;
+	bottom: 0;
+}
+
+.login-banner {
+	position: fixed;
+	top: 0;
+	left: 0;
+	width: 100%;
+	height: 50px;
+	background: rgba(255,255,255,0.9);
+	border-bottom: 1px solid #f9b100;
+
+	.QQ-login-box {
+		width: 63px;
+		height: 24px;
+		position: absolute;
+		right: 250px;
+		top: 14px;
+
+		a {
+			position: absolute;
+			top: 0;
+			right: 0;
+			bottom: 0;
+			left: 0;
+		}
+	}
+
+	.weibo-login-box {
+		width: 62px;
+		height: 24px;
+		position: absolute;
+		right: 150px;
+		top: 14px;
+
+		a {
+			position: absolute;
+			top: 0;
+			right: 0;
+			bottom: 0;
+			left: 0;
+		}
+	}
+
+}
+
