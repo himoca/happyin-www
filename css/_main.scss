@@ -54,11 +54,11 @@
 	border-bottom: 1px solid #f9b100;
 
 	.QQ-login-box {
-		width: 63px;
+		width: 120px;
 		height: 24px;
 		position: absolute;
 		right: 250px;
-		top: 14px;
+		top: 13px;
 
 		a {
 			position: absolute;
@@ -70,19 +70,11 @@
 	}
 
 	.weibo-login-box {
-		width: 62px;
+		width: 120px;
 		height: 24px;
 		position: absolute;
-		right: 150px;
-		top: 14px;
-
-		a {
-			position: absolute;
-			top: 0;
-			right: 0;
-			bottom: 0;
-			left: 0;
-		}
+		right: 100px;
+		top: 12px;
 	}
 
 }

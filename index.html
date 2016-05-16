@@ -25,8 +25,8 @@
 
 	</style>
 	<script type="text/javascript" src="js/jquery-2.1.4.min.js"></script>
-	<script type="text/javascript" src="http://qzonestyle.gtimg.cn/qzone/openapi/qc_loader.js" data-appid="101308522" data-redirecturi="http://www.happyin.com.cn/" charset="utf-8"></script>
-	<script src="http://tjs.sjs.sinajs.cn/open/api/js/wb.js?appkey=2005712080" type="text/javascript" charset="utf-8"></script>
+	<script type="text/javascript" src="http://qzonestyle.gtimg.cn/qzone/openapi/qc_loader.js" data-appid="101308522" data-redirecturi="http://happyin.marujunyy.cn/order/freecouponshare.html" charset="utf-8" ></script>
+	<script src="http://tjs.sjs.sinajs.cn/open/api/js/wb.js?appkey=1741022870" type="text/javascript" charset="utf-8"></script>
 </head>
 <body>
 	<h1>Happyin —— 终身免费手机照片冲印</h1>
@@ -55,38 +55,34 @@
 		</div>
 		<div class="login-banner">
 			<div class="QQ-login-box">
-				<img alt="" src="images/Connect_logo_7.png" width="63" height="22">
-				<a href="javascript:void(0)" id="qqLoginBtn"></a>
+				<span id="qqLoginBtn" ></span>
 			</div>
 			<div class="weibo-login-box">
-				<wb:share-button appkey="2005712080" addition="simple" type="button"></wb:share-button>
+				<div id="wb_connect_btn"></div>
 			</div>
 		</div>
 	</div>
 
 	<script>
-		$('#qqLoginBtn').on('click',function(){
-			QC.Login.showPopup({
-				appId:"101308522",
-				redirectURI:""
-			});
+		QC.Login({
+			btnId : "qqLoginBtn",//插入按钮的html标签id
+			size : "B_M",//按钮尺寸
+			scope : "get_user_info",//展示授权，全部可用授权可填 all
+			display : "pc"//应用场景，可选
 		});
 
 		WB2.anyWhere(function(W){
-			W.parseCMD("/users/show.json", function(sResult, bStatus){
-				try{
-					//to do something...
-				}catch(e){}
-			},{
-				uid: '2005712080'
-			},{
-				method: 'get'
-			});
-		});
-
-		$('#weiboLoginBtn').on('click',function(){
-			WB2.login(function() {
-
+			W.widget.connectButton({
+				id: "wb_connect_btn",
+				type:"3,2",
+				callback: {
+					login: function(o){	//登录后的回调函数
+						alert("login: " + o.screen_name)
+					},
+					logout: function(){	//退出后的回调函数
+						alert('logout');
+					}
+				}
 			});
 		});
 
