@@ -1,5 +1,5 @@
 <!DOCTYPE html>
-<html lang="zh" xmlns:wb="http://open.weibo.com/wb">
+<html lang="zh">
 
 <head>
 	<meta charset="UTF-8">
@@ -7,8 +7,8 @@
 	<meta name="viewport"
 		  content="width=device-width, initial-scale=1.0, maximum-scale=1.0, user-scalable=0, minimal-ui">
 	<meta name="format-detection" content="telephone=no">
-	<meta property="qc:admins" content="2000377277601001166375636" />
-	<meta property="wb:webmaster" content="93d18a38a09c40de" />
+	<!--<meta property="qc:admins" content="2000377277601001166375636" />-->
+	<!--<meta property="wb:webmaster" content="93d18a38a09c40de" />-->
 	<link rel="icon" href="images/ico.png">
 	<link rel="stylesheet" href="css/style.css">
 	<style>
@@ -17,6 +17,7 @@
 		}
 
 		h1 {
+			display: none;
 			position: absolute;
 			top: 0;
 			left: -9999px;
@@ -25,8 +26,8 @@
 
 	</style>
 	<script type="text/javascript" src="js/jquery-2.1.4.min.js"></script>
-	<script type="text/javascript" src="http://qzonestyle.gtimg.cn/qzone/openapi/qc_loader.js" data-appid="101308522" data-redirecturi="http://www.happyin.com.cn" charset="utf-8" ></script>
-	<script src="http://tjs.sjs.sinajs.cn/open/api/js/wb.js?appkey=3366847509" type="text/javascript" charset="utf-8"></script>
+	<!--<script type="text/javascript" src="http://qzonestyle.gtimg.cn/qzone/openapi/qc_loader.js" data-appid="101308522" data-redirecturi="http://www.happyin.com.cn" charset="utf-8" ></script>-->
+	<!--<script src="http://tjs.sjs.sinajs.cn/open/api/js/wb.js?appkey=3366847509" type="text/javascript" charset="utf-8"></script>-->
 </head>
 <body>
 	<h1>Happyin —— 终身免费手机照片冲印</h1>
@@ -63,7 +64,7 @@
 		</div>
 	</div>
 
-	<script>
+	<!--<script>
 		QC.Login({
 			btnId : "qqLoginBtn",//插入按钮的html标签id
 			size : "B_M",//按钮尺寸
@@ -86,6 +87,29 @@
 			});
 		});
 
+	</script>-->
+
+	<script>
+		var screenWidth = $(window).width();  //屏幕宽度
+		var screenHeight = $(window).height(); //屏幕高度
+
+		var ua = navigator.userAgent;
+		var environment = {
+			isWeixin: (/MicroMessenger/i).test(ua),
+			isQq: (/QQ/i).test(ua),
+			isIos: (ua.indexOf('Mac') > -1 && ua.indexOf('Mobile') > -1),
+			isAndroid: (ua.indexOf('Mozilla/5.0') > -1 && ua.indexOf('Android ') > -1 && ua.indexOf('AppleWebKit') > -1),
+			isWeibo: (ua.indexOf('Weibo') > -1),
+			isWinPhone: (ua.indexOf('Windows Phone') > -1)
+		};
+
+		if(environment.isIos || environment.isAndroid || environment.isWinPhone) {
+			if(screenHeight >= screenWidth || screenWidth <= 650) {
+				$('.HI-main-img').css({'width': 'auto', 'height': 'auto'});
+				$('.fcs-back-spread').css('width', 'auto');
+				$('.company-info').css({'width': 'auto','font-size': '12px'});
+			}
+		}
 	</script>
 </body>
 </html>
