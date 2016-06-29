@@ -1,0 +1,120 @@
+@charset "utf-8";
+
+@function rem($px) {
+	@return $px*(1/10)*1rem;
+}
+
+html{
+	font-size: 62.5%;
+}
+
+@font-face {
+	font-family: 'impact';
+	src: url('../fonts/impact_0.ttf');
+	src: url('../fonts/impact_0.eot?#iefix') format("embedded-opentype"), url('../fonts/impact_0.woff') format("woff"), url('../fonts/impact_0.ttf') format("truetype"), url('../fonts/impact_0.otf') format("opentype");
+}
+
+.index-backimg {
+	position: fixed;
+	width: 100%;
+	height: 100%;
+	z-index: 1;
+}
+
+.index-content-box {
+	position: relative;
+	z-index: 10;
+
+}
+
+.index-printsbox {
+	width: 100%;
+	text-align: center;
+
+	.index-printsnum-box {
+		display: inline-block;
+		color: #ffffff;
+		font-size: 20px;
+
+		.index-date {
+			display: inline-block;
+			margin-left: 150px;
+
+			div{
+				display: inline-block;
+				border-top: 2px solid #ffffff;
+			}
+		}
+
+		.index-prints-num {
+			font-family: 'impact';
+			display: inline-block;
+			font-size: 150px;
+			line-height: 1;
+
+		}
+
+		.index-words {
+			display: inline-block;
+			margin-right: 150px;
+		}
+	}
+}
+
+.index-prints-line {
+	margin-top: 26px;
+	width: 100%;
+	height: 1px;
+	margin-bottom: 100px;
+	background: url("../images/line1.png") no-repeat center 0;
+	background-size: 100% 100%;
+	background: -moz-linear-gradient(left, rgba(255,255,255,0), rgba(255,255,255,1) 40%, rgba(255,255,255,1) 60%, rgba(255,255,255,0) 100%);
+	background: -webkit-gradient(linear, 0 0,100% 0, from(rgba(255,255,255,0)), color-stop(40%, rgba(255,255,255,1)), color-stop(60%, rgba(255,255,255,1)), color-stop(100%, rgba(255,255,255,0)));
+}
+
+.download-box {
+	margin: 0 auto 0;
+	text-align: center;
+
+	.download-area {
+		display: inline-block;
+
+		.download-ios {
+			display: block;
+			width: 270px;
+		}
+
+		span {
+			display: block;
+			width: 270px;
+			height: 1px;
+			background: url("../images/line1.png") no-repeat center 0;
+			background-size: 100% 100%;
+			background: -moz-linear-gradient(left, rgba(255,255,255,0), rgba(255,255,255,1) 40%, rgba(255,255,255,1) 60%, rgba(255,255,255,0) 100%);
+			background: -webkit-gradient(linear, 0 0,100% 0, from(rgba(255,255,255,0)), color-stop(40%, rgba(255,255,255,1)), color-stop(60%, rgba(255,255,255,1)), color-stop(100%, rgba(255,255,255,0)));
+		}
+
+		.download-android {
+			display: block;
+			width: 270px;
+		}
+	}
+
+	.download-QR {
+		display: inline-block;
+		width: 98px;
+	}
+}
+
+.index-companyinfo {
+	//margin: 80px auto 30px;
+	position: fixed;
+	left: 0;
+	right: 0;
+	bottom: 20px;
+	color: #ffffff;
+	font-size: 12px;
+	text-align: center;
+}
+
+

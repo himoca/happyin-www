@@ -1,5 +1,7 @@
 @charset "utf-8";
 @import "base";			//默认样式
-@import "productshare";	//商品分享
-@import "banner";		//导航栏
-@import "main";			//主页相关
+//@import "productshare";	//商品分享
+//@import "banner";		//导航栏
+//@import "main";			//主页相关-旧
+@import "index";		//主页
+@import "mobile";		//移动端主页

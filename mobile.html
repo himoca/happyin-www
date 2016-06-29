@@ -30,40 +30,41 @@
 		function fnResize(){
 			var docWidth = document.documentElement.clientWidth,
 					body = document.getElementsByTagName('html')[0];
-			body.style.fontSize = (0.625 * (docWidth / 1920) ) * 100 + '%';
+			body.style.fontSize = (0.625 * (docWidth / 320) ) * 100 + '%';
 		}
 
 	</script>
 </head>
 <body>
 	<h1>Happyin —— 终身免费手机照片冲印</h1>
-	<img class="index-backimg" alt="" src="images/happyin-backimg.jpg">
-	<div class="index-content-box">
-		<div class="index-printsbox">
-			<div class="index-printsnum-box">
-				<div class="index-date">
-					<p><i class="p-day">01st</i> <i class="p-month">Jan.</i> <i class="p-year">1970</i></p>
+	<!--<div class="mobile-backimg-box"></div>-->
+	<img class="mobile-backimg" alt="" src="images/happyin-backimg.jpg">
+	<div class="mobile-content-box">
+		<div class="mobile-printsbox">
+			<div class="mobile-printsnum-box">
+				<div class="mobile-date">
+					<p><i class="m-day">01st</i> <i class="m-month">Jan.</i> <i class="m-year">1970</i></p>
 					<div>Happy in 已冲印</div>
 				</div>
-				<p class="index-prints-num">0</p>
-				<div class="index-words">张照片</div>
-				<div class="index-prints-line"></div>
+				<p class="mobile-prints-num">1,000,000</p>
+				<div class="mobile-words">张照片</div>
+				<div class="mobile-prints-line"></div>
 			</div>
 		</div>
-		<div class="download-box">
-			<div class="download-area">
-				<a href="https://itunes.apple.com/cn/app/kuai-le-yin-happyin-zhong/id1112861646?mt=8" class="download-ios">
+		<div class="mobile-download-box">
+			<div class="mobile-download-area">
+				<a href="https://itunes.apple.com/cn/app/kuai-le-yin-happyin-zhong/id1112861646?mt=8" class="mobile-download-ios">
 					<img alt="" src="images/download-ios.png" width="100%">
 				</a>
 				<span></span>
-				<a href="http://a.app.qq.com/o/simple.jsp?pkgname=com.happyin.print" class="download-android">
+				<a href="http://a.app.qq.com/o/simple.jsp?pkgname=com.happyin.print" class="mobile-download-android">
 					<img alt="" src="images/download-android.png" width="100%">
 				</a>
 			</div>
-			<div class="download-QR">
+			<div class="mobile-download-QR">
 				<img alt="" src="images/download-QR.jpg" width="100%">
 			</div>
-			<div class="index-companyinfo">
+			<div class="mobile-companyinfo">
 				<p>Beijing HappyIn Technology Co., Ltd.</p>
 				<p>联系我们：bd@happyin.com.cn</p>
 				<p>京ICP备16023187号</p>
@@ -73,18 +74,6 @@
 	<script type="text/javascript">
 		var screenWidth = $(window).width();  //屏幕宽度
 		var screenHeight = $(window).height(); //屏幕高度
-
-		if(screenWidth <= 768) {
-			var href = location.href;
-			if(href.indexOf('index.html') > 0) {
-				href = href.replace('index.html','mobile.html');
-			}else {
-				href = href + 'mobile.html';
-			}
-			location.href = href;
-		}
-
-		$('.index-printsbox').css('padding-top',screenHeight*0.28);
 
 		Number.prototype.formatMoney = function (places, symbol, thousand, decimal) {
 			places = !isNaN(places = Math.abs(places)) ? places : 2;
@@ -107,10 +96,10 @@
 					console.log(d);
 					var data = d.p;
 					var count = data.count.formatMoney(0,'');
-					$('.index-prints-num').html(count);
-					$('.p-day').html(data.day);
-					$('.p-month').html(data.month + '.');
-					$('.p-year').html(data.year);
+					$('.mobile-prints-num').html(count);
+					$('.m-day').html(data.day);
+					$('.m-month').html(data.month + '.');
+					$('.m-year').html(data.year);
 				},
 				error: function(e){
 
