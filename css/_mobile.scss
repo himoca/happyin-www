@@ -134,6 +134,37 @@ html{
 	text-align: center;
 }
 
+.mobile-prints-numbersbox {
+	position: relative;
+	top: rem(6);
+	font-family: 'impact';
+	display: inline-block;
+	height: rem(56);
+	width: auto;
+	overflow: hidden;
+	font-size: rem(56);
+	color: #ffffff;
+	text-align: center;
+	line-height: 1;
+
+	.mobile-number-box {
+		position: relative;
+		top: 0;
+		width: rem(30);
+		float: left;
+
+		.mobile-number {
+			display: block;
+			width: rem(30);
+			height: rem(56);
+		}
+	}
+
+	.mobile-number-dot {
+		width: rem(10);
+		float: left;
+	}
+}
 
 
 

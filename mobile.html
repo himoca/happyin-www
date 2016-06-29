@@ -18,6 +18,7 @@
 		}
 	</style>
 	<script type="text/javascript" src="js/jquery-2.1.4.min.js"></script>
+	<script type="text/javascript" src="js/mobilenumberscroll.js"></script>
 	<script>
 
 
@@ -46,7 +47,7 @@
 					<p><i class="m-day">01st</i> <i class="m-month">Jan.</i> <i class="m-year">1970</i></p>
 					<div>Happy in 已冲印</div>
 				</div>
-				<p class="mobile-prints-num">0</p>
+				<div class="mobile-prints-numbersbox"></div>
 				<div class="mobile-words">张照片</div>
 				<div class="mobile-prints-line"></div>
 			</div>
@@ -95,24 +96,42 @@
 			ajaxUrl = location.protocol + '//' + location.host + '/Catalog/Picture/officialWeb'
 		}
 
-		$(function(){
+		function doAjax(){
+			var count = 0;
 			$.ajax({
 				url: ajaxUrl,
 //				url: 'http://dev.happyin.com.cn/Catalog/Picture/officialWeb',
 				dataType: 'json',
+				async: false,
 				success: function(d){
-					console.log(d);
+//					console.log(d);
 					var data = d.p;
-					var count = data.count.formatMoney(0,'');
-					$('.mobile-prints-num').html(count);
-					$('.m-day').html(data.day);
-					$('.m-month').html(data.month + '.');
-					$('.m-year').html(data.year);
+//					var count = data.count.formatMoney(0,'');
+//					$('.index-prints-num').html(count);
+					count = data.count;
+					$('.p-day').html(data.day);
+					$('.p-month').html(data.month + '.');
+					$('.p-year').html(data.year);
+
 				},
 				error: function(e){
 
 				}
-			})
+			});
+			return count;
+		}
+
+		$(function(){
+			//alert(doAjax());
+			//初始化
+			var nums = doAjax();
+			var numRun = $(".mobile-prints-numbersbox").numberAnimate({num:nums, speed:2000, symbol:","});
+			setInterval(function(){
+				nums = doAjax();
+//				nums += 1;
+				numRun.resetData(nums);
+//				console.log(nums);
+			},5000);
 		})
 	</script>
 </body>

@@ -117,4 +117,36 @@ html{
 	text-align: center;
 }
 
+.index-prints-numbersbox {
+	position: relative;
+	top: 20px;
+	font-family: 'impact';
+	display: inline-block;
+	height: 150px;
+	width: auto;
+	overflow: hidden;
+	font-size: 150px;
+	color: #ffffff;
+	text-align: center;
+	line-height: 1;
+
+	.index-number-box {
+		position: relative;
+		top: 0;
+		width: 80px;
+		float: left;
+
+		.index-number {
+			display: block;
+			width: 80px;
+			height: 150px;
+		}
+	}
+
+	.index-number-dot {
+		width: 25px;
+		float: left;
+	}
+}
+
 
