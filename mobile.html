@@ -39,7 +39,7 @@
 <body>
 	<h1>Happyin —— 终身免费手机照片冲印</h1>
 	<!--<div class="mobile-backimg-box"></div>-->
-	<img class="mobile-backimg" alt="" src="images/happyin-backimg.jpg">
+	<img class="mobile-backimg" alt="" src="images/happyin-mobile-backimg.jpg">
 	<div class="mobile-content-box">
 		<div class="mobile-printsbox">
 			<div class="mobile-printsnum-box">
@@ -90,7 +90,7 @@
 
 		var ajaxUrl ='';
 		var href = location.href;
-		if(href.indexOf('www.happyin.com.cn') > 0){
+		if(href.indexOf('http://www.happyin.com.cn') == 0 || href.indexOf('http://happyin.com.cn') == 0){
 			ajaxUrl = 'https://api.happyin.com.cn/Catalog/Picture/officialWeb';
 		}else {
 			ajaxUrl = location.protocol + '//' + location.host + '/Catalog/Picture/officialWeb'

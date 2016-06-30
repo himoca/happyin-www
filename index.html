@@ -101,7 +101,7 @@
 
 		href = location.href;
 		var ajaxUrl ='';
-		if(href.indexOf('www.happyin.com.cn') > 0){
+		if(href.indexOf('http://www.happyin.com.cn') == 0 || href.indexOf('http://happyin.com.cn') == 0){
 			ajaxUrl = 'https://api.happyin.com.cn/Catalog/Picture/officialWeb';
 		}else {
 			ajaxUrl = location.protocol + '//' + location.host + '/Catalog/Picture/officialWeb'
