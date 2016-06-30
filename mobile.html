@@ -104,14 +104,14 @@
 				dataType: 'json',
 				async: false,
 				success: function(d){
-//					console.log(d);
+					console.log(d);
 					var data = d.p;
 //					var count = data.count.formatMoney(0,'');
 //					$('.index-prints-num').html(count);
 					count = data.count;
-					$('.p-day').html(data.day);
-					$('.p-month').html(data.month + '.');
-					$('.p-year').html(data.year);
+					$('.m-day').html(data.day);
+					$('.m-month').html(data.month + '.');
+					$('.m-year').html(data.year);
 
 				},
 				error: function(e){
